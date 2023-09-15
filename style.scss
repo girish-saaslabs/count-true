@@ -1,0 +1,66 @@
+$default-font: "Inter", sans-serif;
+$heading-font: "Merriweather", serif;
+$primary-color: #333;
+$border-color: #333;
+$button-color: #fff;
+
+@mixin fonts() {
+    font-family: $default-font;
+    color: $primary-color;
+}
+@mixin headingFonts() {
+    font-family: $heading-font;
+    color: $primary-color;
+    font-weight: 700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    @include fonts();
+    h1 {
+        @include headingFonts();
+        font-size: 25px;
+        line-height: 1.3;
+    }
+    input, button {
+        @include fonts();
+        padding: 8px;
+        height: 40px;
+        margin-bottom: 5px;
+    }
+    input {
+        border: 1px solid $primary-color;
+        border-radius: 4px;
+        font-size: 14px;
+        width: 180px;
+    }
+    button {
+        background-color: $primary-color;
+        border: 1px solid $primary-color;
+        color: $button-color;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 14px;
+        width: 100px;
+    }
+    .container {
+        max-width: 1300px;
+        margin: 0 auto;
+        width: 90%;
+    }
+    section {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    div {
+        padding-bottom: 12px;
+    }
+    span#array-list {
+        word-wrap: break-word;
+    }
+}
